@@ -7,36 +7,36 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #6dd5ed, #2193b0); /* Fondo degradado azul claro */
-            color: #fff; /* Color de texto blanco */
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             text-align: center;
-            overflow: hidden; /* Para ocultar cualquier desbordamiento de las animaciones */
+            overflow: hidden;
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.15); /* Fondo semitransparente para el contenido */
+            background-color: rgba(255, 255, 255, 0.15);
             padding: 40px 60px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo del contenedor */
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             max-width: 700px;
-            animation: fadeInScale 1.5s ease-out; /* Animación de entrada */
+            animation: fadeInScale 1.5s ease-out;
             position: relative;
             z-index: 10;
         }
 
         h1 {
             font-size: 3.5em;
-            color: #FFD700; /* Dorado para el título */
+            color: #FFD700;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: textPop 1.5s ease-out forwards; /* Animación para el texto principal */
+            animation: textPop 1.5s ease-out forwards;
             animation-delay: 0.5s;
             opacity: 0;
         }
@@ -55,9 +55,24 @@
             font-size: 1.3em;
             margin-top: 30px;
             font-style: italic;
-            color: #FFD700; /* Dorado para la firma */
+            color: #FFD700;
             animation: fadeIn 2s ease-out forwards;
             animation-delay: 1.5s;
+            opacity: 0;
+        }
+
+        /* Estilos para la imagen */
+        .imagen-graduacion {
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 2.5s ease-out forwards;
+            animation-delay: 2s;
             opacity: 0;
         }
 
@@ -65,27 +80,20 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background-color: #ffd700; /* Dorado */
+            background-color: #ffd700;
             border-radius: 50%;
             opacity: 0;
             animation: confettiFall linear infinite;
         }
 
-        .confetti:nth-child(2n) { background-color: #ff69b4; /* Rosa */ }
-        .confetti:nth-child(3n) { background-color: #90ee90; /* Verde claro */ }
-        .confetti:nth-child(4n) { background-color: #add8e6; /* Azul claro */ }
-        .confetti:nth-child(5n) { background-color: #ffa07a; /* Naranja claro */ }
+        .confetti:nth-child(2n) { background-color: #ff69b4; }
+        .confetti:nth-child(3n) { background-color: #90ee90; }
+        .confetti:nth-child(4n) { background-color: #add8e6; }
+        .confetti:nth-child(5n) { background-color: #ffa07a; }
 
-        /* Animaciones */
         @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         @keyframes fadeIn {
@@ -100,27 +108,25 @@
         }
 
         @keyframes confettiFall {
-            0% {
-                transform: translateY(-100px) rotateZ(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotateZ(720deg);
-                opacity: 0.5;
-            }
+            0% { transform: translateY(-100px) rotateZ(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0.5; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>¡Felicidades, mi amor!</h1>
-        <p>Hoy celebramos tu gran logro. Estoy muy orgulloso de ti y de todo lo que has conseguido.</p>
-        <p>Tu esfuerzo y dedicación me inspiran cada día. Te amo muchísimo y siempre estaré a tu lado.</p>
+        <p>Hoy es un día para celebrar tu increíble logro. Has trabajado tan duro, con tanta dedicación y pasión, y ver cómo alcanzas esta meta me llena de un orgullo inmenso.</p>
+
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a44778ea-3457-40e0-8979-b7e3685d23d0/df17eoj-4f260b49-72bf-46e7-bcc7-590c95271d80.png/v1/fill/w_1192,h_670/angela_hello_kitty_sanrio_4k_png_by_newjer53_df17eoj-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYTQ0Nzc4ZWEtMzQ1Ny00MGUwLTg5NzktYjdlMzY4NWQyM2QwXC9kZjE3ZW9qLTRmMjYwYjQ5LTcyYmYtNDZlNy1iY2M3LTU5MGM5NTI3MWQ4MC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qsejHTKmd2K0t9Ft5p6S5SokoTQnXyycnSlvfgbCacA" alt="Angela Hello Kitty Sanrio 4k" class="imagen-graduacion">
+
+        <p>Sabía que lo lograrías. Tu inteligencia, tu perseverancia y tu espíritu incansable son una inspiración para todos los que te rodeamos, y especialmente para mí.</p>
+        <p>Este es solo el comienzo de cosas aún más grandes y maravillosas que sé que conseguirás. Estoy emocionado/a por cada paso que des y por cada éxito que celebremos juntos.</p>
+        <p>Gracias por ser tú y por inspirarme cada día. ¡Te amo con todo mi corazón!</p>
         <p class="signature">Con todo mi amor, <br> [Tu Nombre]</p>
     </div>
 
     <script>
-        // Función para generar confeti
         function createConfetti() {
             const confettiCount = 50;
             const body = document.body;
@@ -129,21 +135,19 @@
                 const confetti = document.createElement('div');
                 confetti.classList.add('confetti');
                 confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.animationDuration = Math.random() * 3 + 2 + 's'; // 2-5 seconds
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
                 confetti.style.animationDelay = Math.random() * 2 + 's';
-                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`; // Colores aleatorios
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
                 body.appendChild(confetti);
 
-                // Eliminar el confeti después de que termine su animación para no acumular elementos
                 confetti.addEventListener('animationend', () => {
                     confetti.remove();
                 });
             }
         }
 
-        // Generar confeti al cargar la página y cada cierto tiempo
         window.onload = createConfetti;
-        setInterval(createConfetti, 3000); // Generar más confeti cada 3 segundos
+        setInterval(createConfetti, 3000);
     </script>
 </body>
 </html>
